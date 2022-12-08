@@ -2,10 +2,10 @@
 
 namespace Microsoft.eShopWeb.ApplicationCore.Entities
 {
-    public class PriceType : BaseEntity, IAggregateRoot
+    public class CatalogPrice : BaseEntity, IAggregateRoot
     {
         public string Price { get; private set; }
-        public PriceType(string price)
+        public CatalogPrice(string price)
         {
             Price = price;
         }
