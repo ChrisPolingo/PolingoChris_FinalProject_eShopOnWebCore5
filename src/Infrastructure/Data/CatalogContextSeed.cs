@@ -60,10 +60,11 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogBrand>
             {
-                new("Azure"),
-                new(".NET"),
-                new("Visual Studio"),
-                new("SQL Server"),
+                //Updated with new brands for catalog
+                new("Juegoal"),
+                new("Maverick"),
+                new("Chessex"),
+                new("Wizards of the Coast"),
                 new("Other")
             };
         }
@@ -72,11 +73,13 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogType>
             {
-                new("Mug"),
-                new("T-Shirt"),
-                new("Sheet"),
-                new("USB Memory Stick"),
-                new("Games")
+                //Updated with new types of products
+                new("Dice"),
+                new("Cards"),
+                new("Card Games"),
+                new("Board Games"),
+                new("Magic the Gathering")
+                
             };
         }
 
@@ -84,22 +87,34 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogItem>
             {
-                new(2,2, ".NET Bot Black Sweatshirt", ".NET Bot Black Sweatshirt", 19.5M,  "http://catalogbaseurltobereplaced/images/products/1.png"),
-                new(5,5, "Juegoal Wooden Chess & Checkers Set with Storage Drawer, 12 Inch Classic 2 in 1 Board Games for Kids and Adults, Travel Portable Chess Game Sets, 2 Extra Queen, Extra 24 Wooden Checkers Pieces", 
+                // Added my new products for my shop
+                // 10 points for the assignment
+                //TODO: Finish adding more products
+                new(4,1, "Juegoal Wooden Chess & Checkers Set with Storage Drawer, 12 Inch Classic 2 in 1 Board Games for Kids and Adults, Travel Portable Chess Game Sets, 2 Extra Queen, Extra 24 Wooden Checkers Pieces",
                     "Juegoal Wooden Chess & Checkers Set with Storage Drawer", 39.99M,  "https://m.media-amazon.com/images/I/71+tUMbRZFL._AC_SL1500_.jpg"),
-                new(5,5, "Five Crowns -- The Game Isn't Over Until the Kings Go Wild! -- 5 Suited Rummy-Style Card Game -- 8+ ", 
+                new(3,5, "Five Crowns -- The Game Isn't Over Until the Kings Go Wild! -- 5 Suited Rummy-Style Card Game -- 8+",
                     "Five Crowns", 12.99M, "https://m.media-amazon.com/images/I/617lPmDJnvL._AC_SL1000_.jpg"),
-                new(1,2, ".NET Black & White Mug", ".NET Black & White Mug", 8.50M, "http://catalogbaseurltobereplaced/images/products/2.png"),
-                new(2,5, "Prism White T-Shirt", "Prism White T-Shirt", 12,  "http://catalogbaseurltobereplaced/images/products/3.png"),
-                new(2,2, ".NET Foundation Sweatshirt", ".NET Foundation Sweatshirt", 12, "http://catalogbaseurltobereplaced/images/products/4.png"),
-                new(3,5, "Roslyn Red Sheet", "Roslyn Red Sheet", 8.5M, "http://catalogbaseurltobereplaced/images/products/5.png"),
-                new(2,2, ".NET Blue Sweatshirt", ".NET Blue Sweatshirt", 12, "http://catalogbaseurltobereplaced/images/products/6.png"),
-                new(2,5, "Roslyn Red T-Shirt", "Roslyn Red T-Shirt",  12, "http://catalogbaseurltobereplaced/images/products/7.png"),
-                new(2,5, "Kudu Purple Sweatshirt", "Kudu Purple Sweatshirt", 8.5M, "http://catalogbaseurltobereplaced/images/products/8.png"),
-                new(1,5, "Cup<T> White Mug", "Cup<T> White Mug", 12, "http://catalogbaseurltobereplaced/images/products/9.png"),
-                new(3,2, ".NET Foundation Sheet", ".NET Foundation Sheet", 12, "http://catalogbaseurltobereplaced/images/products/10.png"),
-                new(3,2, "Cup<T> Sheet", "Cup<T> Sheet", 8.5M, "http://catalogbaseurltobereplaced/images/products/11.png"),
-                new(2,5, "Prism White TShirt", "Prism White TShirt", 12, "http://catalogbaseurltobereplaced/images/products/12.png")
+                new(1,3, "12mm Six Sided Die (36) Block of Dice",
+                    "Chessex Dice d6 Sets: Marble Ivory with Black", 13.98M,
+                    "https://m.media-amazon.com/images/I/71ZgZfikW2L._AC_SL1400_.jpg"),
+                new(1,5, "Haxtec DND Dice Set Sharp Edge Resin Dice Iridecent Inclusion with Dice Case Purple D&D Dice for RPG Role Playing Games Dungeons and Dragons Gift Galaxy Series",
+                    "Haxtec DND Dice Set Sharp Edge Resin Dice", 26.99M,
+                    "https://m.media-amazon.com/images/I/81HgVMHrTkL._AC_SL1500_.jpg"),
+                new(1,5, "D&D 7/Set of Polyhedral Resin TRPG Dice Set MTG Dungeons and Dragons Pathfinder Role-Playing Board Game Collection and Gifts (with Exquisite Metal Box)-Red and Blue",
+                    "D&D 7/Set of Polyhedral Resin TRPG Dice Set", 29.99M,
+                    "https://m.media-amazon.com/images/I/81zEf57uOoL._AC_SL1500_.jpg"),
+                new(3,1, "Juegoal Upgrade Wood Cribbage Board Game Set, Solid Wooden Continuous 3 Track Board with Larger Storage Area, 9 Metal Pegs and 2 Decks of Playing Cards, Travel Portable Cribbage Game Sets",
+                    "Juegoal Upgrade Wood Cribbage Board Game Set", 27.99M,
+                    "https://m.media-amazon.com/images/I/813ov1Ig+oL._AC_SL1500_.jpg"),
+                new(2,2, "Maverick Playing Cards, Jumbo Index, 12 Pack",
+                    "Maverick Playing Cards, Jumbo Index, 12 Pack", 19.99M,
+                    "https://m.media-amazon.com/images/I/81rdNJUN2EL._AC_SL1500_.jpg"),
+                new(5,4, "Magic: The Gathering The Brothers’ War Retro-Frame Commander Deck - Urza's Iron Alliance (White-Blue-Black) + Collector Booster Sample Pack",
+                    "Commander Deck - Urza's Iron Alliance", 45.00M,
+                    "https://m.media-amazon.com/images/I/81ldSIYzGoL._AC_SL1500_.jpg"),
+                new(5,4, "Magic: The Gathering The Brothers’ War Retro-Frame Commander Deck - Mishra’s Burnished Banner (Blue-Black-Red) + Collector Booster Sample Pack",
+                    "Commander Deck - Mishra’s Burnished Banner", 45.00M,
+                    "https://m.media-amazon.com/images/I/81N2ZwuYoLL._AC_SL1500_.jpg")
             };
         }
     }
