@@ -39,6 +39,16 @@ namespace Microsoft.eShopWeb.Web.Services
             });
         }
 
+        //TODO: Finish this method along with others to add a price specification
+        public async Task<IEnumerable<SelectListItem>> GetPrices()
+        {
+            return await _cache.GetOrCreateAsync(CacheHelpers.GenerateBrandsCacheKey(), async entry =>
+            {
+                entry.SlidingExpiration = CacheHelpers.DefaultCacheDuration;
+                return await _catalogViewModelService.GetPrices();
+            });
+        }
+
         public async Task<IEnumerable<SelectListItem>> GetTypes()
         {
             return await _cache.GetOrCreateAsync(CacheHelpers.GenerateTypesCacheKey(), async entry =>

@@ -21,6 +21,7 @@ namespace Microsoft.eShopWeb.Web.Services
         private readonly IRepository<CatalogItem> _itemRepository;
         private readonly IRepository<CatalogBrand> _brandRepository;
         private readonly IRepository<CatalogType> _typeRepository;
+        //private readonly IRepository<CatalogPrice> _priceRepository;
         private readonly IUriComposer _uriComposer;
 
         public CatalogViewModelService(
@@ -37,7 +38,8 @@ namespace Microsoft.eShopWeb.Web.Services
             _uriComposer = uriComposer;
         }
 
-        public async Task<CatalogIndexViewModel> GetCatalogItems(int pageIndex, int itemsPage, int? brandId, int? typeId)
+        //TODO: Implement priceId
+        public async Task<CatalogIndexViewModel> GetCatalogItems(int pageIndex, int itemsPage, int? brandId, int? typeId, int? priceId)
         {
             _logger.LogInformation("GetCatalogItems called.");
 
@@ -107,6 +109,23 @@ namespace Microsoft.eShopWeb.Web.Services
             items.Insert(0, allItem);
 
             return items;
+        }
+
+        public async Task<IEnumerable<SelectListItem>> GetPrices()
+        {
+            _logger.LogInformation("GetPrices called.");
+            //var types = await _priceRepository.ListAsync();
+
+            //var items = types
+            //    .Select(type => new SelectListItem() { Value = type.Id.ToString(), Text = type.Type })
+            //    .OrderBy(t => t.Text)
+            //    .ToList();
+
+            //var allItem = new SelectListItem() { Value = null, Text = "All", Selected = true };
+            //items.Insert(0, allItem);
+
+            //return items;
+            return null;
         }
     }
 }
