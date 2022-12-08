@@ -75,7 +75,8 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
                 new("Mug"),
                 new("T-Shirt"),
                 new("Sheet"),
-                new("USB Memory Stick")
+                new("USB Memory Stick"),
+                new("Games")
             };
         }
 
@@ -84,6 +85,10 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
             return new List<CatalogItem>
             {
                 new(2,2, ".NET Bot Black Sweatshirt", ".NET Bot Black Sweatshirt", 19.5M,  "http://catalogbaseurltobereplaced/images/products/1.png"),
+                new(5,5, "Juegoal Wooden Chess & Checkers Set with Storage Drawer, 12 Inch Classic 2 in 1 Board Games for Kids and Adults, Travel Portable Chess Game Sets, 2 Extra Queen, Extra 24 Wooden Checkers Pieces", 
+                    "Juegoal Wooden Chess & Checkers Set with Storage Drawer", 39.99M,  "https://m.media-amazon.com/images/I/71+tUMbRZFL._AC_SL1500_.jpg"),
+                new(5,5, "Five Crowns -- The Game Isn't Over Until the Kings Go Wild! -- 5 Suited Rummy-Style Card Game -- 8+ ", 
+                    "Five Crowns", 12.99M, "https://m.media-amazon.com/images/I/617lPmDJnvL._AC_SL1000_.jpg"),
                 new(1,2, ".NET Black & White Mug", ".NET Black & White Mug", 8.50M, "http://catalogbaseurltobereplaced/images/products/2.png"),
                 new(2,5, "Prism White T-Shirt", "Prism White T-Shirt", 12,  "http://catalogbaseurltobereplaced/images/products/3.png"),
                 new(2,2, ".NET Foundation Sweatshirt", ".NET Foundation Sweatshirt", 12, "http://catalogbaseurltobereplaced/images/products/4.png"),
