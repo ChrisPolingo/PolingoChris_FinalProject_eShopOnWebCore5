@@ -36,6 +36,15 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
                     await catalogContext.SaveChangesAsync();
                 }
 
+                //Added to support price filter
+                if (!await catalogContext.CatalogPrices.AnyAsync())
+                {
+                    await catalogContext.CatalogPrices.AddRangeAsync(
+                        GetPreconfiguredCatalogPrices());
+
+                    await catalogContext.SaveChangesAsync();
+                }
+
                 if (!await catalogContext.CatalogItems.AnyAsync())
                 {
                     await catalogContext.CatalogItems.AddRangeAsync(
@@ -80,6 +89,14 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
                 new("Board Games"),
                 new("Magic the Gathering")
                 
+            };
+        }
+
+        static IEnumerable<CatalogPrice> GetPreconfiguredCatalogPrices()
+        {
+            return new List<CatalogPrice>
+            {
+                new("Test if it is working")
             };
         }
 
