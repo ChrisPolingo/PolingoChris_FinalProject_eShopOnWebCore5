@@ -13,6 +13,8 @@
                 <section class="esh-orders-detail-title col-xs-3">Order number</section>
                 <section class="esh-orders-detail-title col-xs-3">Date</section>
                 <section class="esh-orders-detail-title col-xs-2">Total</section>
+                <section class="esh-orders-detail-title col-xs-2">Tax</section>
+                <section class="esh-orders-detail-title col-xs-2">Grand Total</section>
                 <section class="esh-orders-detail-title col-xs-3">Status</section>
             </article>
 
@@ -20,6 +22,8 @@
                 <section class="esh-orders-detail-item col-xs-3">@Model.OrderNumber</section>
                 <section class="esh-orders-detail-item col-xs-3">@Model.OrderDate</section>
                 <section class="esh-orders-detail-item col-xs-2">$@Model.Total.ToString("N2")</section>
+                <section class="esh-orders-detail-item col-xs-2">$@Model.Tax.ToString("N2")</section>
+                <section class="esh-orders-detail-item col-xs-2">$@Model.GrandTotal.ToString("N2")</section>
                 <section class="esh-orders-detail-item col-xs-3">@Model.Status</section>
             </article>
         </section>

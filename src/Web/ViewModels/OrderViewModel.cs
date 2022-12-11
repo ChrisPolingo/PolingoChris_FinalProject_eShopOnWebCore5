@@ -11,6 +11,9 @@ namespace Microsoft.eShopWeb.Web.ViewModels
         public int OrderNumber { get; set; }
         public DateTimeOffset OrderDate { get; set; }
         public decimal Total { get; set; }
+        //Added to add tax and grand total functionality
+        public decimal Tax { get; set; }
+        public decimal GrandTotal { get; set; }
         public string Status => DEFAULT_STATUS;
         public Address ShippingAddress { get; set; }
         public List<OrderItemViewModel> OrderItems { get; set; } = new List<OrderItemViewModel>();

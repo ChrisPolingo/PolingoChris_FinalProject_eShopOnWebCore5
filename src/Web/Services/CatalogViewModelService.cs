@@ -31,7 +31,8 @@ namespace Microsoft.eShopWeb.Web.Services
             IRepository<CatalogBrand> brandRepository,
             IRepository<CatalogType> typeRepository,
             IUriComposer uriComposer,
-            IRepository<CatalogPrice> priceRepository)
+            IRepository<CatalogPrice> priceRepository
+            )
         {
             _logger = loggerFactory.CreateLogger<CatalogViewModelService>();
             _itemRepository = itemRepository;
@@ -42,11 +43,12 @@ namespace Microsoft.eShopWeb.Web.Services
             _priceRepository = priceRepository;
         }
 
-        //TODO: Implement priceId
+        //Implemented price for price filter functionality
         public async Task<CatalogIndexViewModel> GetCatalogItems(int pageIndex, int itemsPage, int? brandId, int? typeId, int? priceId)
         {
             _logger.LogInformation("GetCatalogItems called.");
 
+            //Added for price filter functionality
             var filterSpecification = new CatalogFilterSpecification(brandId, typeId, priceId);
             var filterPaginatedSpecification =
                 new CatalogFilterPaginatedSpecification(itemsPage * pageIndex, itemsPage, brandId, typeId, priceId);

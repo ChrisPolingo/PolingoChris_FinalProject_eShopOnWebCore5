@@ -48,5 +48,28 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate
             }
             return total;
         }
+
+        //Added to add the total tax in the grand total field
+        /*
+         * Calls the total method to gets the ammount of tax to be applied in the grand total.
+         */
+        public decimal Tax()
+        {
+            decimal total = Total();
+
+            total = total * 0.06M;
+
+            return total;
+        }
+
+        /*
+         * Returns the sum of the total and the amount of tax.
+         */
+        public decimal grandTotal()
+        {
+            decimal grandTotal = Total() + Tax();
+
+            return grandTotal;
+        }
     }
 }
