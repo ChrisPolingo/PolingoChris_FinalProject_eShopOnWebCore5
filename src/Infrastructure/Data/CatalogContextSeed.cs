@@ -131,7 +131,25 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
                     "https://m.media-amazon.com/images/I/81ldSIYzGoL._AC_SL1500_.jpg"),
                 new(5,4, "Magic: The Gathering The Brothers’ War Retro-Frame Commander Deck - Mishra’s Burnished Banner (Blue-Black-Red) + Collector Booster Sample Pack",
                     "Commander Deck - Mishra’s Burnished Banner", 45.00M,
-                    "https://m.media-amazon.com/images/I/81N2ZwuYoLL._AC_SL1500_.jpg")
+                    "https://m.media-amazon.com/images/I/81N2ZwuYoLL._AC_SL1500_.jpg"),
+                new(5,4, "Magic The Gathering Strixhaven Commander Deck – Lorehold Legacies (Red-White)",
+                    "Magic The Gathering Strixhaven Commander Deck", 34.64M,
+                    "https://m.media-amazon.com/images/I/71RO9uuSBGL._AC_SL1500_.jpg"),
+                new(5,4, "Magic The Gathering Strixhaven Commander Deck – Quantum Quandrix (Blue-Green)",
+                    "Magic The Gathering Strixhaven Commander Deck", 36.14M,
+                    "https://m.media-amazon.com/images/I/71HwjdK3nfL._AC_SL1500_.jpg"),
+                new(1,3, "Chessex Dice d6 Sets: Nebula Black with White - 12mm Six Sided Die (36) Block of Dice",
+                    "Chessex Dice d6 Sets: Nebula Black with White", 13.98M,
+                    "https://m.media-amazon.com/images/I/51sGN0Ah8NL._AC_.jpg"),
+                new(1,3, "Chessex Green with White Spots Translucent 12Mm 6 Sided Dice 36 by Alliance Games",
+                    "Chessex Green with White Spots Translucent", 9.98M,
+                    "https://m.media-amazon.com/images/I/51Acy0hXr9L._AC_.jpg"),
+                new(1,3, "Chessex Dice D6 Sets: Teal with White Translucent - 12Mm Six Sided Die (36) Block of Dice",
+                    "Chessex Dice D6 Sets: Teal with White Translucent", 8.99M,
+                    "https://m.media-amazon.com/images/I/51Acy0hXr9L._AC_.jpg"),
+                new(1,3, "Chessex CHX27402 Dice-Marble Ivory/Black Set",
+                    "Chessex CHX27402 Dice-Marble Ivory/Black Set", 9.64M,
+                    "https://m.media-amazon.com/images/I/61OwtZTJakL._AC_SL1200_.jpg")
             };
         }
     }
