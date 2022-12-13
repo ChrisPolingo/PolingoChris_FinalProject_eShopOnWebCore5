@@ -96,7 +96,9 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogPrice>
             {
-                new("Test if it is working")
+                new("Test if it is working"),
+                new("0-5"),
+                new("5-10")
             };
         }
 
