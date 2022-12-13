@@ -6,5 +6,8 @@
         public string Name { get; set; }
         public string PictureUri { get; set; }
         public decimal Price { get; set; }
+
+        //Atribute for game piece genre
+        public string CatalogGenre { get; set; }
     }
 }

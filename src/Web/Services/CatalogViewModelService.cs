@@ -64,7 +64,9 @@ namespace Microsoft.eShopWeb.Web.Services
                     Id = i.Id,
                     Name = i.Name,
                     PictureUri = _uriComposer.ComposePicUri(i.PictureUri),
-                    Price = i.Price
+                    Price = i.Price,
+                    //Added for product genre implementation
+                    CatalogGenre = i.CatalogGenre
                 }).ToList(),
                 Brands = (await GetBrands()).ToList(),
                 Types = (await GetTypes()).ToList(),

@@ -18,12 +18,16 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         public int CatalogPriceId { get; private set; }
         public CatalogPrice CatalogPrice { get; private set; }
 
+        //Atribute for game piece genre
+        public string CatalogGenre { get; set; }
+
         public CatalogItem(int catalogTypeId,
             int catalogBrandId,
             string description,
             string name,
             decimal price,
-            string pictureUri)
+            string pictureUri,
+            string catalogGenre)
         {
             CatalogTypeId = catalogTypeId;
             CatalogBrandId = catalogBrandId;
@@ -31,6 +35,7 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
             Name = name;
             Price = price;
             PictureUri = pictureUri;
+            CatalogGenre = catalogGenre;
         }
 
         public void UpdateDetails(string name, string description, decimal price)
