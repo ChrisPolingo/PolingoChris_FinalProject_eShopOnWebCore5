@@ -51,14 +51,40 @@
                     <article class="esh-basket-titles esh-basket-titles--clean row">
                         <section class="esh-basket-title col-xs-10"></section>
                         <section class="esh-basket-title col-xs-2">Total</section>
-                        <section class="esh-basket-title col-xs-2">Tax</section>
-                        <section class="esh-basket-title col-xs-2">Grand Total</section>
                     </article>
 
                     <article class="esh-basket-items row">
                         <section class="esh-basket-item col-xs-10"></section>
                         <section class="esh-basket-item esh-basket-item--mark col-xs-2">$ @Model.BasketModel.Total().ToString("N2")</section>
+                    </article>
+
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-xs-7"></section>
+                    </article>
+                </div>
+                <div class="container">
+                    <article class="esh-basket-titles esh-basket-titles--clean row">
+                        <section class="esh-basket-title col-xs-10"></section>
+                        <section class="esh-basket-title col-xs-2">Tax</section>
+                    </article>
+
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-xs-10"></section>
                         <section class="esh-basket-item esh-basket-item--mark col-xs-2">$ @Model.BasketModel.TotalTax().ToString("N2")</section>
+                    </article>
+
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-xs-7"></section>
+                    </article>
+                </div>
+                <div class="container">
+                    <article class="esh-basket-titles esh-basket-titles--clean row">
+                        <section class="esh-basket-title col-xs-10"></section>
+                        <section class="esh-basket-title col-xs-2">Grand Total</section>
+                    </article>
+
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-xs-10"></section>
                         <section class="esh-basket-item esh-basket-item--mark col-xs-2">$ @Model.BasketModel.GrandTotal().ToString("N2")</section>
                     </article>
 
