@@ -14,9 +14,6 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         public CatalogType CatalogType { get; private set; }
         public int CatalogBrandId { get; private set; }
         public CatalogBrand CatalogBrand { get; private set; }
-        //Added code to add the price filter
-        public int CatalogPriceId { get; private set; }
-        public CatalogPrice CatalogPrice { get; private set; }
 
         //Atribute for game piece genre
         public string CatalogGenre { get; set; }

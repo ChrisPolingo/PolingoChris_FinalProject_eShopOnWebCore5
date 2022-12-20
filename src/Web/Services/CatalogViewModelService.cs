@@ -21,8 +21,6 @@ namespace Microsoft.eShopWeb.Web.Services
         private readonly IRepository<CatalogItem> _itemRepository;
         private readonly IRepository<CatalogBrand> _brandRepository;
         private readonly IRepository<CatalogType> _typeRepository;
-        //Added for price filter
-        private readonly IRepository<CatalogPrice> _priceRepository;
         private readonly IUriComposer _uriComposer;
 
         public CatalogViewModelService(
@@ -30,8 +28,7 @@ namespace Microsoft.eShopWeb.Web.Services
             IRepository<CatalogItem> itemRepository,
             IRepository<CatalogBrand> brandRepository,
             IRepository<CatalogType> typeRepository,
-            IUriComposer uriComposer,
-            IRepository<CatalogPrice> priceRepository
+            IUriComposer uriComposer
             )
         {
             _logger = loggerFactory.CreateLogger<CatalogViewModelService>();
@@ -39,19 +36,16 @@ namespace Microsoft.eShopWeb.Web.Services
             _brandRepository = brandRepository;
             _typeRepository = typeRepository;
             _uriComposer = uriComposer;
-            //Added for Price filter
-            _priceRepository = priceRepository;
         }
 
-        //Implemented price for price filter functionality
-        public async Task<CatalogIndexViewModel> GetCatalogItems(int pageIndex, int itemsPage, int? brandId, int? typeId, int? priceId)
+    
+        public async Task<CatalogIndexViewModel> GetCatalogItems(int pageIndex, int itemsPage, int? brandId, int? typeId)
         {
             _logger.LogInformation("GetCatalogItems called.");
 
-            //Added for price filter functionality
-            var filterSpecification = new CatalogFilterSpecification(brandId, typeId, priceId);
+            var filterSpecification = new CatalogFilterSpecification(brandId, typeId);
             var filterPaginatedSpecification =
-                new CatalogFilterPaginatedSpecification(itemsPage * pageIndex, itemsPage, brandId, typeId, priceId);
+                new CatalogFilterPaginatedSpecification(itemsPage * pageIndex, itemsPage, brandId, typeId);
 
             // the implementation below using ForEach and Count. We need a List.
             var itemsOnPage = await _itemRepository.ListAsync(filterPaginatedSpecification);
@@ -70,10 +64,8 @@ namespace Microsoft.eShopWeb.Web.Services
                 }).ToList(),
                 Brands = (await GetBrands()).ToList(),
                 Types = (await GetTypes()).ToList(),
-                Prices = (await GetTypes()).ToList(),
                 BrandFilterApplied = brandId ?? 0,
                 TypesFilterApplied = typeId ?? 0,
-                PriceFilterApplied = priceId ?? 0,
                 PaginationInfo = new PaginationInfoViewModel()
                 {
                     ActualPage = pageIndex,
@@ -121,21 +113,5 @@ namespace Microsoft.eShopWeb.Web.Services
             return items;
         }
 
-        //Added for the price filter
-        public async Task<IEnumerable<SelectListItem>> GetPrices()
-        {
-            _logger.LogInformation("GetPrices called.");
-            var price = await _priceRepository.ListAsync();
-
-            var items = price
-                .Select(price => new SelectListItem() { Value = price.Id.ToString(), Text = price.Price })
-                .OrderBy(t => t.Text)
-                .ToList();
-
-            var allItem = new SelectListItem() { Value = null, Text = "All", Selected = true };
-            items.Insert(0, allItem);
-
-            return items;
-        }
     }
 }
